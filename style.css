@@ -47,6 +47,7 @@ p {
 }
 
 
+  
 button.normal {
     font-size: 14px;
     font-weight: 600;
@@ -188,17 +189,22 @@ body {
 }
 
 #feature {
-    display: flex;
+
+    display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 items per row */
+  gap: 20px; /* Adjust the space between items */
+  justify-items: center; /* Centers items horizontally */
+    /* display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: wrap; */
 }
 
 #feature .fe-box {
-    width: 180px;
+    width: 250px;
     text-align: center;
-    padding: 25px 15px;
-    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.3);
+    padding: 15px 15px;
+    box-shadow: 15px 20px 34px rgba(0, 0, 0, 0.3);
     border: 1px solid #cce7d0;
     border-radius: 4px;
     margin: 15px 0;
@@ -219,13 +225,13 @@ body {
     padding: 9px 8px 6px 8px;
     line-height: 1;
     border-radius: 4px;
-    color: #088178;
-    background-color: #fddde4;
+    color: white;
+    background-color: navy;
 }
 
 
-#feature .fe-box:nth-child(2) h6 {
-    background-color: #c8a32a;
+/* #feature .fe-box:nth-child(2) h6 {
+    background-color: hsl(240, 24%, 37%);
 }
 
 #feature .fe-box:nth-child(3) h6 {
@@ -242,7 +248,7 @@ body {
 
 #feature .fe-box:nth-child(6) h6 {
     background-color: #fa2f76;
-}
+} */
 
 
 
@@ -754,17 +760,155 @@ footer .copyright {
     background-image: url("img/about/banner.png");
 }
 
-#about-head{
+#about-head {
     display: flex;
     align-items: center;
 }
 
-#about-head img{
-    width:50%;
+#about-head img {
+    width: 50%;
     height: auto;
 }
 
 
+#about-head div {
+    padding-left: 40px;
+}
+
+#about-app {
+    text-align: center;
+}
+
+#about-app .video {
+    width: 70%;
+    height: 100%;
+    margin: 30px auto 0 auto;
+}
+
+
+#about-app .video {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+#contact-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#contact-details .details {
+    width: 40%;
+}
+
+
+#contact-details .details span,
+#form-details form span {
+    font-size: 12px;
+}
+
+#contact-details .details h2,
+#form-details form h2 {
+    font-size: 26px;
+    line-height: 35px;
+    padding: 20px 0;
+}
+
+#contact-details .details h3 {
+    font-size: 16px;
+    padding-bottom: 15px;
+}
+#contact-details .details li{
+list-style: none;
+display: flex;
+padding: 10px 0;
+}
+
+#contact-details .details li i{
+font-size: 14px;
+padding-right:22px;
+}
+
+#contact-details .details li p{
+    margin: 0;
+    font-size: 14px;
+}
+
+
+/* #contact-details .mapwrap{
+    padding: auto;
+    margin-right:50px ;
+} */
+#contact-details .mapwrap{
+    width: 55%;
+    height: 400px;
+}
+
+#contact-details .map{
+    width: 500px;
+    height: 100%;
+}
+
+#form-details{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+    padding: 80px;
+    border: 1px solid #e1e1e1;
+}
+
+#form-details form{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+#form-details form input,
+#form-details form textarea{
+    width: 100%;
+    padding: 12px 15px;
+    outline: none;
+    margin-bottom: 20px;
+    border : 1px solid #e1e1e1;
+}
+
+#from-details form button{
+    background-color: #088178;
+    color: #fff;
+}
+
+
+#form-details .people div{
+padding-bottom: 25px;
+display: flex;
+align-items: flex-start;
+}
+
+
+#form-details .people div img{
+    padding-bottom: 65px;
+    height: 65px;
+    object-fit: cover;
+    margin-right: 15px;
+    }
+
+
+#form-details .people div p{
+    margin: 0;
+    font-size: 13px;
+    line-height: 25px;
+}
+
+#form-details .people div p span{
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+
+}
 
 @media(max-width:799px) {
     .section-p1 {
@@ -866,6 +1010,13 @@ footer .copyright {
     #newsletter .form {
         width: 70%;
     }
+    #form-details{
+        padding:40px;
+    }
+    #form-details form{
+        width: 50%;
+    }
+
 }
 
 @media(max-width:477px) {
@@ -979,5 +1130,47 @@ footer .copyright {
     #blog .blog-details {
         width: 100%;
     }
+
+
+    #about-head {
+        flex-direction: column;
+    }
+
+    #about-head img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    #about-head div {
+        padding-left: 0px;
+    }
+
+    #about-head .video {
+        width: 100%;
+    }
+
+#contact-dtails{
+    flex-direction: column;
+}
+
+#contact-details .details{
+    width: 100%;
+    margin-bottom: 30px;
+}
+#contact-details .map{
+    width: 100%;
+}
+
+#form-details{
+    margin: 10px;
+    padding: 30px 10px;
+    flex-wrap: wrap;
+}
+
+#form-details form{
+    width: 100%;
+    margin-bottom: 30px;
+}
+
 
 }
