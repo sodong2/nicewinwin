@@ -47,7 +47,6 @@ p {
 }
 
 
-  
 button.normal {
     font-size: 14px;
     font-weight: 600;
@@ -194,20 +193,22 @@ body {
   grid-template-columns: repeat(4, 1fr); /* 4 items per row */
   gap: 20px; /* Adjust the space between items */
   justify-items: center; /* Centers items horizontally */
-    /* display: flex;
+    display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap; */
+    flex-wrap: wrap;
 }
 
 #feature .fe-box {
-    width: 250px;
+    width: 20%;
+    min-width: 250px;
     text-align: center;
     padding: 15px 15px;
     box-shadow: 15px 20px 34px rgba(0, 0, 0, 0.3);
     border: 1px solid #cce7d0;
     border-radius: 4px;
     margin: 15px 0;
+    position: relative;
 }
 
 
@@ -974,6 +975,7 @@ align-items: flex-start;
     }
 
     #feature .fe-box {
+        width: 40%;
         margin: 15px 15px;
     }
 
@@ -1046,7 +1048,7 @@ align-items: flex-start;
     }
 
     #feature .fe-box {
-        width: 155px;
+        width: 100%;
         margin: 0 0 15px 0;
     }
 

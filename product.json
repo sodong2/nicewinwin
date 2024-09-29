@@ -1,0 +1,22 @@
+[
+    {
+      "id": "1",
+      "name": "유/무선 단말기",
+      "brand": "나이스정보통신",
+      "price": "월12000원~",
+      "image": "img/products/f1.jpg",
+      "description": "최신형 단말기로 빠르고 정확한 거래를 담당합니다.",
+      "stars": 5
+    },
+    {
+      "id": "2",
+      "name": "무선단말기",
+      "brand": "나이스정보통신",
+      "price": "월11000원~",
+      "image": "img/products/f2.jpg",
+      "description": "통신료 별도 발생합니다. 무선단말기로 어디서든 결제가능",
+      "stars": 5
+    }
+    
+  ]
+  
